@@ -1,0 +1,88 @@
+.Sidebar {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    width: 300px;
+    height: 100%;
+    background: #121212;
+    /* backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px); */
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 4px 0 24px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    display: flex;
+    flex-direction: column;
+}
+
+.SidebarOpen {
+    transform: translateX(300px);
+}
+
+.Backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    z-index: 999;
+}
+
+.BackdropOpen {
+    opacity: 1;
+    visibility: visible;
+}
+
+.SidebarHeader {
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.Nav {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 0.5rem;
+}
+
+.SidebarLink {
+    display: block;
+}
+
+.Icon {
+    width: 24px;
+    height: 24px;
+}
+
+.NavItem {
+    display: flex;
+    justify-content: center;
+    border-radius: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    filter: drop-shadow(0 0 20px var(--nav-hover-color));
+    padding: 1rem;
+}
+
+.LogoWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.Logo {
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.LogoText {
+    font-size: 1.25rem;
+    font-weight: var(--font-weight-bold);
+    color: color-mix(in oklab, #fff 90%, transparent);
+}

@@ -1,0 +1,105 @@
+.TerminalContainer {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 40px 0;
+}
+
+.TerminalGlow {
+    position: absolute;
+    inset: -20px;
+    background: radial-gradient(circle, rgba(164, 194, 178, 0.15) 0%, transparent 70%);
+    filter: blur(40px);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.TerminalWindow {
+    position: relative;
+    width: 100%;
+    background: rgba(16, 20, 18, 0.9);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(164, 194, 178, 0.15);
+    border-radius: 18px;
+    overflow: hidden;
+    font-family: 'JetBrains Mono', 'Menlo', 'Monaco', monospace;
+    z-index: 1;
+    box-shadow: 
+        0 2px 4px rgba(0, 0, 0, 0.3),
+        0 10px 20px rgba(0, 0, 0, 0.4),
+        0 30px 60px rgba(0, 0, 0, 0.5);
+}
+
+.TerminalHeader {
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.WindowButtons {
+    display: flex;
+    gap: 8px;
+}
+
+.Button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.Close { background: #ff5f57; }
+.Minimize { background: #febc2e; }
+.Maximize { background: #28c840; }
+
+.TerminalTitle {
+    color: rgba(164, 194, 178, 0.4);
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.TerminalBody {
+    padding: 0 25px 30px 25px;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 14px;
+    line-height: 1.6;
+    min-height: 200px;
+}
+
+/* Text Component Styles */
+
+.Line {
+    margin-bottom: 4px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.Prompt {
+    color: var(--nav-hover-color);
+    margin-right: 12px;
+    font-weight: 500;
+}
+
+.Command {
+    color: #fff;
+}
+
+.Response {
+    color: rgba(255, 255, 255, 0.8);
+    margin: 2px 0 12px 0;
+    white-space: pre-wrap;
+}
+
+.Cursor {
+    display: inline-block;
+    color: var(--nav-hover-color);
+    animation: blink 1s step-end infinite;
+    margin-left: 2px;
+    font-weight: bold;
+}
+
+@keyframes blink {
+    from, to { opacity: 1; }
+    50% { opacity: 0; }
+}

@@ -1,0 +1,83 @@
+.Header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    transition: background-color .3s ease, opacity .3s ease;
+    z-index: 1000;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.HeaderContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap:30px;
+}
+
+.MenuButton {
+    display: none;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.LogoWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.Logo {
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.LogoText {
+    font-size: 1.25rem;
+    font-weight: var(--font-weight-bold);
+    color: color-mix(in oklab, #fff 90%, transparent);;
+}
+
+.MenuIcon {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    
+    .HeaderContainer {
+        justify-content: flex-start;
+        gap: 1rem;
+    }
+
+    .MenuButton {
+        display: flex;
+    }
+
+    .NavWrapper {
+        display: none;
+    }
+}
+
+@media (max-width: 245px) {
+    .LogoText {
+        display: none;
+    }
+}
