@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic';
+
 import styles from "./page.module.css";
 import Terminal from "./components/Terminal/Terminal";
 import { TerminalLine, TerminalPrompt, TerminalCommand, TerminalResponse, TerminalCursor } from "./components/Terminal/TerminalText";

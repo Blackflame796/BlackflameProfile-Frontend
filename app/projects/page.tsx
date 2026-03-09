@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic';
+
 import Project from "../components/Project";
 import { getProjects, Project as APIProject } from "../lib/services";
 import styles from "./projects.module.css";
