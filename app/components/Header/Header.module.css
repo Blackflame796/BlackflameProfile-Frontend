@@ -7,7 +7,7 @@
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     transition: background-color .3s ease, opacity .3s ease;
-    z-index: 1000;
+    z-index: 10000;
     height: 80px;
     display: flex;
     align-items: center;
@@ -39,6 +39,8 @@
     align-items: center;
     justify-content: space-between;
     gap: 20px;
+    border-right: 1px solid rgba(255, 255, 255, .3);
+    padding-right: 40px;
 }
 
 .Logo {
@@ -46,10 +48,19 @@
     object-fit: cover;
 }
 
+.Logo:hover {
+    filter: drop-shadow(0 0 20px var(--logo-hover-filter-color));
+}
+
 .LogoText {
+    width: 100%;
     font-size: 1.25rem;
     font-weight: var(--font-weight-bold);
-    color: color-mix(in oklab, #fff 90%, transparent);;
+    color: var(--logo-text-color);
+}
+
+.LogoText:hover {
+    filter: drop-shadow(0 0 20px var(--logo-text-color));
 }
 
 .MenuIcon {
@@ -73,6 +84,10 @@
 
     .NavWrapper {
         display: none;
+    }
+
+    .LogoWrapper {
+        border-right: 0px;
     }
 }
 

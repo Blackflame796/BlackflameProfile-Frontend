@@ -1,10 +1,9 @@
 .NavItem {
     position: relative;
+    width: -webkit-fill-available;
     color: var(--nav-color);
     padding: 0.8rem 1.6rem;
-    border-radius: 25px;
     font-size: 1.1rem;
-    font-weight: 500;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     display: inline-flex;
     align-items: center;
@@ -12,28 +11,31 @@
     cursor: pointer;
     border: 1px solid transparent;
     background: transparent;
+    font-weight: 600;
 }
 
 .NavItem:hover {
     color: var(--nav-hover-color);
-    background: rgba(255, 255, 255, 0.05);
-    border-color: rgba(255, 255, 255, 0.1);
+    filter: drop-shadow(0 0 20px var(--nav-hover-color));
+    /* background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.1); */
     transform: translateY(-2px);
-    box-shadow: 
+    /* box-shadow: 
         0 5px 15px rgba(0, 0, 0, 0.3),
-        0 0 15px rgba(164, 194, 178, 0.15);
+        0 0 15px rgba(164, 194, 178, 0.15); */
 }
 
-.NavItem.active {
+.NavText.active {
+    padding:10px;
+    filter: drop-shadow(0 0 20px var(--nav-hover-color));
     color: var(--nav-hover-color);
-    background: rgba(164, 194, 178, 0.12);
-    border-color: rgba(164, 194, 178, 0.25);
-    font-weight: 600;
-    box-shadow: 0 5px 10px #0006, 0 0 10px #a4c2b233;
+    /* background: rgba(164, 194, 178, 0.12); */
+    /* border-color: rgba(164, 194, 178, 0.25); */
+    /* box-shadow: 0 5px 10px #0006, 0 0 10px #a4c2b233; */
 }
 
 /* Subtle glow pulse animation for active items */
-.NavItem.active::after {
+.NavText.active::after {
     content: '';
     position: absolute;
     bottom: 0;

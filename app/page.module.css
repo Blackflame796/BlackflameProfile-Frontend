@@ -1,0 +1,135 @@
+.main {
+    width: 100%;
+    max-width: 1200px;
+    margin: 4rem auto;
+}
+
+.HeroSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+    margin-bottom: 8rem;
+    width: 100%;
+    animation: fadeIn 1s ease-out;
+}
+
+@media (max-width: 1024px) {
+    .HeroSection {
+        flex-direction: column;
+        text-align: left;
+    }
+}
+
+.GreetingContainer {
+    flex: 1;
+    text-align: left;
+}
+
+.GreetingTitle {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    background: linear-gradient(90deg, #fff, var(--nav-hover-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.GreetingSubtitle {
+    font-size: 1.2rem;
+    color: var(--nav-color);
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+.SectionTitle {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: #fff;
+    text-align: center;
+}
+
+.SkillsContainer {
+    width: 100%;
+    max-width: 1200px;
+    margin: 4rem auto;
+}
+
+.SkillsGrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 4rem;
+    justify-content: center;
+}
+
+.SkillPill {
+    padding: 0.5rem 1rem;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 100px;
+    font-size: 0.9rem;
+    color: var(--nav-color);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.2s ease;
+    cursor: default;
+}
+
+.SkillPill:hover {
+    border-color: var(--accent-color);
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.SkillIcon {
+    width: 20px;
+    height: 20px;
+}
+
+.ProjectsSection {
+    margin-bottom: 6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding-bottom: 4rem;
+}
+
+.ProjectGrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
+}
+
+.LearnMoreContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.LearnMoreButton {
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    border: 1px solid var(--accent-color);
+    background: rgba(164, 194, 178, 0.1);
+    border-radius: 100px;
+    color: var(--nav-hover-color);
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.LearnMoreButton:hover {
+    background: var(--nav-hover-color);
+    color: #000;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

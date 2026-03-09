@@ -1,12 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
 
 :root {
-  --background: #0a0a0a;
+  --background: #090909;
+  --sidebar-background: #090909;
   --foreground: #fff;
   --nav-color: #d4d4d4;
   --nav-hover-color: #a4c2b2;
   --button-hover-background: #262626;
   --font-weight-bold: 700;
+  --logo-hover-filter-color: #4f4c55;
+  --logo-text-color: color-mix(in oklab, #fff 90%, transparent);
+  --accent-color: #a4c2b2;
+  --card-bg: #111;
+  --card-border: #222;
+  --card-hover-border: #333;
+  --border-radius: 12px;
 }
 
 body {
@@ -48,3 +56,11 @@ body.no-scroll {
     overflow: hidden;
     width: 100%;
 }
+
+/* Typography & Base */
+.GreetingTitle, .ProjectDetailTitle {
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+/* Base resets or common utilities could go here */

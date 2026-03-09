@@ -1,0 +1,91 @@
+.ProjectCard {
+    position: relative;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+}
+
+.ProjectCard:hover {
+    border-color: var(--accent-color);
+    transform: scale(1.02);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.ProjectHeader {
+    margin-bottom: 0.75rem;
+}
+
+.ProjectTitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+    color: #fff;
+    text-align: center;
+}
+
+.StretchedLink::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+.StretchedLink {
+    text-decoration: none;
+    color: inherit;
+}
+
+.ProjectDesc {
+    font-size: 0.95rem;
+    color: var(--nav-color);
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.TechPills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: auto;
+    justify-content: center;
+}
+
+.TechWrapper {
+    display: contents;
+    position: relative;
+    z-index: 2;
+}
+
+.TechLinkPill {
+    position: relative;
+    z-index: 2;
+    padding: 0.25rem 0.75rem;
+    background: rgba(164, 194, 178, 0.1);
+    border: 1px solid rgba(164, 194, 178, 0.2);
+    border-radius: 100px;
+    font-size: 0.8rem;
+    color: var(--nav-hover-color);
+    text-decoration: none;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.TechLinkPill:hover {
+    background: var(--nav-hover-color);
+    color: #000;
+}
+
+.TechIcon {
+    width: 16px;
+    height: 16px;
+}

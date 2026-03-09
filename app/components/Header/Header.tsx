@@ -48,10 +48,10 @@ const Header = () => {
                                 <NavItem isActive={pathname === '/'}>Home</NavItem>
                             </Link>
                             <Link href={'/projects'}>
-                                <NavItem isActive={pathname === '/projects'}>Projects</NavItem>
+                                <NavItem isActive={pathname.startsWith('/projects')}>Projects</NavItem>
                             </Link>
                             <Link href={'/about'}>
-                                <NavItem isActive={pathname === '/about'}>About</NavItem>
+                                <NavItem isActive={pathname.startsWith('/about')}>About</NavItem>
                             </Link>
                         </Nav>
                     </div>

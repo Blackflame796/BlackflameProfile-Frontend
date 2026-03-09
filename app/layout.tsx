@@ -8,6 +8,8 @@ export const metadata: Metadata = {
   description: "Blackflame",
 };
 
+import Preloader from "./components/Preloader/Preloader";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -16,6 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <Preloader fullScreen={true} minimumDisplayTime={1500} />
         <Header />
         <main className={styles.Container}>
           {children}

@@ -1,15 +1,35 @@
-const ProjectsPage = () => {
+import Project from "../components/Project";
+import { getProjects, Project as APIProject } from "../lib/services";
+import styles from "./projects.module.css";
+import pageStyles from "../page.module.css";
+import sharedStyles from "../shared.module.css";
+
+export default async function ProjectsPage() {
+  let projects: APIProject[] = [];
+  try {
+    projects = await getProjects();
+  } catch (error) {
+    console.error("Failed to fetch projects:", error);
+  }
+
   return (
-    <div>
-      <h1>Projects</h1>
-      <p>Here are some of my projects:</p>
-      <ul>
-        <li><a href="/projects/project1">Project 1</a></li>
-        <li><a href="/projects/project2">Project 2</a></li>
-        <li><a href="/projects/project3">Project 3</a></li>
-      </ul>
+    <div className={`${sharedStyles.animateFadeIn} ${styles.wrapper}`}>
+      <h1 className={sharedStyles.SectionTitle}>All Projects</h1>
+      <div className={styles.grid}>
+        {projects.length > 0 ? (
+          projects.map((project) => (
+            <Project 
+              key={project.id} 
+              id={project.id}
+              name={project.name} 
+              description={project.description} 
+              technologies={project.technologies} 
+            />
+          ))
+        ) : (
+          <p style={{ color: 'var(--nav-color)' }}>No projects found.</p>
+        )}
+      </div>
     </div>
   );
-};
-
-export default ProjectsPage;
+}

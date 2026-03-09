@@ -1,0 +1,66 @@
+.wrapper {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 6rem 2rem;
+}
+
+.GlassCard {
+    background: rgba(17, 17, 17, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 3rem;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    margin-bottom: 4rem;
+}
+
+.ProjectDetailHeader {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.ProjectDetailTitle {
+    font-size: 4rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, #fff 0%, var(--accent-color) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 1.5rem;
+}
+
+.DetailSection {
+    margin-bottom: 3rem;
+}
+
+.DetailLabel {
+    color: var(--accent-color);
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.DetailValue {
+    font-size: 1.25rem;
+    line-height: 1.7;
+    color: var(--nav-color);
+}
+
+.BackLink {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--nav-color);
+    transition: color 0.2s ease;
+    margin-bottom: 2rem;
+    text-decoration: none;
+}
+
+.BackLink:hover {
+    color: var(--accent-color);
+}

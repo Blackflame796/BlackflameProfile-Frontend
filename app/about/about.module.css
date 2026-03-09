@@ -1,0 +1,61 @@
+.wrapper {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 6rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.specialization {
+    color: var(--accent-color);
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.statsGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.statItem {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.storySection {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.storyText {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    text-align: center;
+}
+
+.contactsGrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.contactBadge {
+    cursor: pointer;
+    padding: 0.75rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
