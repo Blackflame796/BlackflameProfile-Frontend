@@ -1,2 +1,2 @@
 export const DEBUG = false;
-export const BASE_URL = DEBUG ? "http://localhost:8000" : "http://dondegusto.ru:5080";
+export const BASE_URL = DEBUG ? "http://localhost:8000" : "https://blackflameprofile-backend.onrender.com/";
