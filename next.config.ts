@@ -6,25 +6,7 @@ const nextConfig: NextConfig = {
     experimental: {
         optimizeCss: true,
     },
-    output: 'standalone',
-    images: {
-        remotePatterns: [
-            {
-                protocol: 'http',
-                hostname: '*',
-                port: '8000',
-            },
-            {
-                protocol: 'https',
-                hostname: '*',
-            },
-            {
-                protocol: 'http',
-                hostname: '*',
-                port: '3000',
-            },
-        ],
-    },
+    output: 'standalone'
 };
 
 export default nextConfig;
