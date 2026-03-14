@@ -126,7 +126,10 @@
 
 .LearnMoreButton:hover {
     background: var(--nav-hover-color);
+    border-color: var(--nav-hover-color);
     color: #000;
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px var(--nav-hover-color);
 }
 
 @keyframes fadeIn {
