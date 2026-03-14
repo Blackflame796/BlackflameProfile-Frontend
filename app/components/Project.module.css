@@ -19,7 +19,12 @@
 }
 
 .ProjectHeader {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 0.75rem;
+    min-height: 44px; /* Matches ProjectLink height for vertical centering */
 }
 
 .ProjectTitle {
@@ -48,6 +53,37 @@
     line-height: 1.5;
     margin-bottom: 1.5rem;
     text-align: center;
+}
+
+.ProjectLinks {
+    position: absolute;
+    right: 0;
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 0;
+    z-index: 2;
+}
+
+.ProjectLink {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 100px;
+    color: var(--nav-color);
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ProjectLink:hover {
+    background: var(--nav-hover-color);
+    border-color: var(--nav-hover-color);
+    color: #000;
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px var(--nav-hover-color);
 }
 
 .TechPills {

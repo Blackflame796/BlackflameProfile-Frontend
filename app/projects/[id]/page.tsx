@@ -3,7 +3,7 @@ export const dynamic = 'force-dynamic';
 import React from "react";
 import Link from "next/link";
 import { getProject } from "../../lib/services";
-import { ArrowLeft, ExternalLink } from "lucide-react";
+import { ArrowLeft, ExternalLink, Github } from "lucide-react";
 import styles from "./project-detail.module.css";
 import pageStyles from "../../page.module.css";
 import sharedStyles from "../../shared.module.css";
@@ -12,7 +12,8 @@ interface Project {
   id: number | string;
   name: string;
   description: string;
-  link?: string;
+  github?: string;
+  website?: string;
   technologies?: {
     id: number;
     name: string;
@@ -85,15 +86,18 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
           <div className={sharedStyles.DetailValue}>{project.description}</div>
         </div>
 
-        {project.link && (
-          <div className={styles.DetailSection}>
-            <span className={sharedStyles.DetailLabel}>Live Project</span>
-            <div className={sharedStyles.DetailValue}>
-              <a href={project.link} target="_blank" rel="noopener noreferrer" className={pageStyles.LearnMoreButton} style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
-                <ExternalLink size={18} />
-                Visit Website
+        {(project.github || project.website) && (
+          <div className={styles.ActionLinksContainer}>
+            {project.github && (
+              <a href={project.github} target="_blank" rel="noopener noreferrer" className={styles.ActionLink} aria-label="GitHub Repository">
+                <Github size={24} />
               </a>
-            </div>
+            )}
+            {project.website && (
+              <a href={project.website} target="_blank" rel="noopener noreferrer" className={styles.ActionLink} aria-label="Live Website">
+                <ExternalLink size={24} />
+              </a>
+            )}
           </div>
         )}
       </div>

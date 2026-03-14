@@ -26,6 +26,8 @@ export default async function ProjectsPage() {
               name={project.name} 
               description={project.description} 
               technologies={project.technologies} 
+              github={project.github}
+              website={project.website}
             />
           ))
         ) : (
