@@ -62,6 +62,11 @@ export default function AboutPage() {
             <Send size={18} /> @{profile.telegram}
           </a>
         )}
+        {profile.telegram_channel && (
+          <a href={`https://t.me/${profile.telegram_channel}`} target="_blank" rel="noopener noreferrer" className={`${sharedStyles.SkillPill} ${styles.contactBadge}`}>
+            <Send size={18} /> Telegram Channel
+          </a>
+        )}
         {profile.github && (
           <a href={`https://github.com/${profile.github}`} target="_blank" rel="noopener noreferrer" className={`${sharedStyles.SkillPill} ${styles.contactBadge}`}>
             <Github size={18} /> GitHub

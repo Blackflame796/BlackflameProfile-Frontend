@@ -103,6 +103,8 @@ export default async function Home() {
                 name={project.name} 
                 description={project.description} 
                 technologies={project.technologies} 
+                github={project.github}
+                website={project.website}
               />
             ))
           ) : (

@@ -19,12 +19,12 @@
 }
 
 .ProjectHeader {
-    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 0.75rem;
     min-height: 44px; /* Matches ProjectLink height for vertical centering */
+    width: 100%;
 }
 
 .ProjectTitle {
@@ -57,7 +57,8 @@
 
 .ProjectLinks {
     position: absolute;
-    right: 0;
+    right: 1.5rem;
+    top: 1.5rem;
     display: flex;
     gap: 0.75rem;
     margin-bottom: 0;
