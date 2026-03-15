@@ -30,10 +30,17 @@
     cursor: pointer;
 }
 
-.SkillPill:hover {
-    border-color: var(--accent-color);
-    color: #fff;
-    transform: translateY(-2px);
+@media (hover: hover) {
+    .SkillPill:hover {
+        border-color: var(--accent-color);
+        color: #fff;
+        transform: translateY(-2px);
+    }
+}
+
+.SkillPill:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
 }
 
 .SkillIcon {

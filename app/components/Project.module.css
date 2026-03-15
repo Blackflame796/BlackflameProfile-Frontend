@@ -12,10 +12,37 @@
     width: 400px;
 }
 
-.ProjectCard:hover {
-    border-color: var(--accent-color);
-    transform: scale(1.02);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+@media (hover: hover) {
+    .ProjectCard:hover {
+        border-color: var(--accent-color);
+        transform: scale(1.02);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+}
+
+.ProjectCard:active {
+    transform: scale(0.98);
+}
+
+@supports selector(:has(*)) {
+    .ProjectCard:has(:focus-visible) {
+        border-color: var(--accent-color);
+        outline: 2px solid var(--accent-color);
+        outline-offset: 4px;
+    }
+    
+    /* Ensure no sticky border after touch */
+    .ProjectCard:focus-within:not(:has(:focus-visible)) {
+        border-color: var(--card-border);
+    }
+}
+
+/* Fallback for browsers without :has support */
+@supports not selector(:has(*)) {
+    .ProjectCard:focus-within {
+        outline: none;
+        border-color: var(--card-border);
+    }
 }
 
 .ProjectHeader {
@@ -79,12 +106,26 @@
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.ProjectLink:hover {
-    background: var(--nav-hover-color);
-    border-color: var(--nav-hover-color);
-    color: #000;
-    transform: translateY(-2px);
-    box-shadow: 0 0 15px var(--nav-hover-color);
+@media (hover: hover) {
+    .ProjectLink:hover {
+        background: var(--nav-hover-color);
+        border-color: var(--nav-hover-color);
+        color: #000;
+        transform: translateY(-2px);
+        box-shadow: 0 0 15px var(--nav-hover-color);
+    }
+}
+
+.ProjectLink:active {
+    opacity: 0.8;
+    transform: scale(0.9);
+}
+
+.ProjectLink:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 4px;
+    background: transparent;
+    color: var(--nav-color);
 }
 
 .TechPills {
@@ -117,12 +158,30 @@
     gap: 0.5rem;
 }
 
-.TechLinkPill:hover {
-    background: var(--nav-hover-color);
-    border-color: var(--nav-hover-color);
-    color: #000;
-    transform: translateY(-2px);
-    box-shadow: 0 0 12px var(--nav-hover-color);
+@media (hover: hover) {
+    .TechLinkPill:hover {
+        background: var(--nav-hover-color);
+        border-color: var(--nav-hover-color);
+        color: #000;
+        transform: translateY(-2px);
+        box-shadow: 0 0 12px var(--nav-hover-color);
+    }
+}
+
+.TechLinkPill:active {
+    background: rgba(164, 194, 178, 0.2);
+    transform: scale(0.95);
+}
+
+.TechLinkPill:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
+/* Reset border and outline for touch focus */
+.TechLinkPill:focus:not(:focus-visible) {
+    outline: none;
+    border-color: rgba(164, 194, 178, 0.2);
 }
 
 .TechIcon {

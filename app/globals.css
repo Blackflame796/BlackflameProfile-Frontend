@@ -15,6 +15,11 @@
   --card-border: #222;
   --card-hover-border: #333;
   --border-radius: 12px;
+  --focus-ring-color: rgba(164, 194, 178, 0.5);
+}
+
+* {
+    -webkit-tap-highlight-color: transparent;
 }
 
 body {
@@ -40,6 +45,20 @@ textarea {
 
 input:focus,
 textarea:focus {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
+button:focus-visible,
+a:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 4px;
+    border-radius: 2px;
+}
+
+/* Remove default focus ring for mouse users, but keep it for keyboard users */
+button:focus:not(:focus-visible),
+a:focus:not(:focus-visible) {
     outline: none;
 }
 

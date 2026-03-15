@@ -48,8 +48,16 @@
     object-fit: cover;
 }
 
-.Logo:hover {
-    filter: drop-shadow(0 0 20px var(--logo-hover-filter-color));
+@media (hover: hover) {
+    .Logo:hover {
+        filter: drop-shadow(0 0 20px var(--logo-hover-filter-color));
+    }
+}
+
+.Logo:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 4px;
+    border-radius: 50%;
 }
 
 .LogoText {
@@ -59,8 +67,16 @@
     color: var(--logo-text-color);
 }
 
-.LogoText:hover {
-    filter: drop-shadow(0 0 20px var(--logo-text-color));
+@media (hover: hover) {
+    .LogoText:hover {
+        filter: drop-shadow(0 0 20px var(--logo-text-color));
+    }
+}
+
+.LogoText:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 4px;
+    border-radius: 4px;
 }
 
 .MenuIcon {

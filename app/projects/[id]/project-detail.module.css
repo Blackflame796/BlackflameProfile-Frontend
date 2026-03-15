@@ -61,7 +61,19 @@
     text-decoration: none;
 }
 
-.BackLink:hover {
+@media (hover: hover) {
+    .BackLink:hover {
+        color: var(--accent-color);
+    }
+}
+
+.BackLink:active {
+    opacity: 0.6;
+}
+
+.BackLink:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 4px;
     color: var(--accent-color);
 }
 
@@ -101,10 +113,23 @@
     pointer-events: none;
 }
 
-.ActionLink:hover {
-    background: var(--nav-hover-color);
-    border-color: var(--nav-hover-color);
-    color: #000;
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(164, 194, 178, 0.25);
+@media (hover: hover) {
+    .ActionLink:hover {
+        background: var(--nav-hover-color);
+        border-color: var(--nav-hover-color);
+        color: #000;
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(164, 194, 178, 0.25);
+    }
+}
+
+.ActionLink:active {
+    transform: scale(0.9);
+}
+
+.ActionLink:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 4px;
+    background: transparent;
+    color: #fff;
 }

@@ -79,10 +79,17 @@
     cursor: default;
 }
 
-.SkillPill:hover {
-    border-color: var(--accent-color);
-    color: #fff;
-    transform: translateY(-2px);
+@media (hover: hover) {
+    .SkillPill:hover {
+        border-color: var(--accent-color);
+        color: #fff;
+        transform: translateY(-2px);
+    }
+}
+
+.SkillPill:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
 }
 
 .SkillIcon {
@@ -124,12 +131,25 @@
     transition: all 0.2s ease;
 }
 
-.LearnMoreButton:hover {
-    background: var(--nav-hover-color);
-    border-color: var(--nav-hover-color);
-    color: #000;
-    transform: translateY(-2px);
-    box-shadow: 0 0 20px var(--nav-hover-color);
+@media (hover: hover) {
+    .LearnMoreButton:hover {
+        background: var(--nav-hover-color);
+        border-color: var(--nav-hover-color);
+        color: #000;
+        transform: translateY(-2px);
+        box-shadow: 0 0 20px var(--nav-hover-color);
+    }
+}
+
+.LearnMoreButton:active {
+    background: rgba(164, 194, 178, 0.3);
+}
+
+.LearnMoreButton:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 4px;
+    background: rgba(164, 194, 178, 0.1);
+    color: var(--nav-hover-color);
 }
 
 @keyframes fadeIn {
