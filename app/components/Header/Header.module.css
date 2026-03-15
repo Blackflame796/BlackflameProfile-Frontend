@@ -15,6 +15,13 @@
     box-sizing: border-box;
 }
 
+@media (max-width: 768px) {
+    .Header {
+        height: 64px;
+        padding: 0 15px;
+    }
+}
+
 .HeaderContainer {
     display: flex;
     justify-content: center;
@@ -28,10 +35,10 @@
     cursor: pointer;
     align-items: center;
     justify-content: center;
-    padding: 8px;
+    padding: 10px;
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
+    width: 44px; /* Increased from 40px for touch */
+    height: 44px; /* Increased from 40px for touch */
 }
 
 .LogoWrapper {
@@ -39,8 +46,15 @@
     align-items: center;
     justify-content: space-between;
     gap: 20px;
-    border-right: 1px solid rgba(255, 255, 255, .3);
+    border-right: 1px solid rgba(255, 255, 255, .15); /* More subtle border */
     padding-right: 40px;
+}
+
+@media (max-width: 768px) {
+    .LogoWrapper {
+        padding-right: 0;
+        gap: 12px;
+    }
 }
 
 .Logo {
@@ -65,6 +79,18 @@
     font-size: 1.25rem;
     font-weight: var(--font-weight-bold);
     color: var(--logo-text-color);
+}
+
+@media (max-width: 768px) {
+    .LogoText {
+        font-size: 1.1rem;
+    }
+}
+
+@media (hover: hover) {
+    .LogoText:hover {
+        filter: drop-shadow(0 0 20px var(--logo-text-color));
+    }
 }
 
 @media (hover: hover) {

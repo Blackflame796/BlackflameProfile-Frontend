@@ -5,6 +5,12 @@
     padding: 6rem 2rem;
 }
 
+@media (max-width: 768px) {
+    .wrapper {
+        padding: 4rem 1rem;
+    }
+}
+
 .GlassCard {
     background: rgba(17, 17, 17, 0.7);
     backdrop-filter: blur(12px);
@@ -14,6 +20,13 @@
     padding: 3rem;
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
     margin-bottom: 4rem;
+}
+
+@media (max-width: 768px) {
+    .GlassCard {
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+    }
 }
 
 .ProjectDetailHeader {
@@ -29,6 +42,23 @@
     -webkit-text-fill-color: transparent;
     background-clip: text;
     margin-bottom: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .ProjectDetailTitle {
+        font-size: 2.5rem;
+        line-height: 1.2;
+    }
+    
+    .ProjectDetailHeader {
+        margin-bottom: 2rem; /* Reduced from 4rem */
+    }
+}
+
+@media (max-width: 480px) {
+    .ProjectDetailTitle {
+        font-size: 2rem;
+    }
 }
 
 .DetailSection {
@@ -51,6 +81,16 @@
     color: var(--nav-color);
 }
 
+@media (max-width: 768px) {
+    .DetailValue {
+        font-size: 1.1rem;
+    }
+    
+    .DetailSection {
+        margin-bottom: 2rem;
+    }
+}
+
 .BackLink {
     display: inline-flex;
     align-items: center;
@@ -59,6 +99,8 @@
     transition: color 0.2s ease;
     margin-bottom: 2rem;
     text-decoration: none;
+    min-height: 44px; /* Touch target */
+    padding: 4px 0;
 }
 
 @media (hover: hover) {

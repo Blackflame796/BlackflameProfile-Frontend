@@ -23,6 +23,9 @@ const Project: React.FC<ProjectProps> = ({ id, name, description, technologies, 
     return (
         <div className={styles.ProjectCard}>
             <div className={styles.ProjectHeader}>
+                {/* Spacer for grid balancing to keep title perfectly centered */}
+                <div className={styles.HeaderSpacer} aria-hidden="true" />
+                
                 <h3 className={styles.ProjectTitle}>
                     <Link href={`/projects/${id}`} className={styles.StretchedLink}>
                         {name}
@@ -42,6 +45,7 @@ const Project: React.FC<ProjectProps> = ({ id, name, description, technologies, 
                         )}
                     </div>
                 )}
+                {!(github || website) && <div className={styles.HeaderSpacer} aria-hidden="true" />}
             </div>
             <p className={styles.ProjectDesc}>{description}</p>
 
